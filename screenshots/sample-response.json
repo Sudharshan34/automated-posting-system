@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "results": [
+    {
+      "platform": "Mastodon",
+      "status": "failed",
+      "posted_url": null,
+      "public_access": false,
+      "date": null,
+      "time": null,
+      "error": "HTTP 403: {\"error\":\"Your login is currently disabled\"}"
+    },
+    {
+      "platform": "Bluesky",
+      "status": "success",
+      "posted_url": "https://bsky.app/profile/sudharshan34.bsky.social/post/3n2fwqxxojb2i",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "12:19:28",
+      "error": null
+    },
+    {
+      "platform": "Dev.to",
+      "status": "failed",
+      "posted_url": null,
+      "public_access": false,
+      "date": null,
+      "time": null,
+      "error": "HTTP 401: {\"error\":\"unauthorized\",\"status\":401}"
+    },
+    {
+      "platform": "Telegram",
+      "status": "success",
+      "posted_url": "https://t.me/sudharshan_posts_2207/9",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "12:19:28",
+      "error": null
+    },
+    {
+      "platform": "Telegraph",
+      "status": "success",
+      "posted_url": "https://telegra.ph/FastAPI-multi-platform-posting-demo-with-per-platform-error-handling-Code-11-16",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "12:19:28",
+      "error": null
+    },
+    {
+      "platform": "GitHub Gist",
+      "status": "success",
+      "posted_url": "https://gist.github.com/Sudharshan34/dd05aa871f352142bcd8470703281d15",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "12:19:29",
+      "error": null
+    },
+    {
+      "platform": "GitLab Snippets",
+      "status": "success",
+      "posted_url": "https://gitlab.com/-/snippets/6079172",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "12:19:28",
+      "error": null
+    }
+  ]
+}
