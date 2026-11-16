@@ -6,11 +6,11 @@ A FastAPI service that publishes one short message (containing exactly one CTA l
 
 | Platform | Result | Notes |
 |---|---|---|
-| Bluesky | Success, public | |
-| Telegram (public channel) | Success, public | |
-| Telegraph | Success, public | |
-| GitHub Gist | Success, public | |
-| GitLab Snippets | Success, public | |
+| Bluesky | Success, public | Public post verified without login |
+| Telegram (public channel) | Success, public | Public post verified without login |
+| Telegraph | Success, public | Public post verified without login |
+| GitHub Gist | Success, public | Public post verified without login |
+| GitLab Snippets | Success, public | Public post verified without login |
 | Mastodon | Failed (HTTP 403) | Worked in earlier runs; mastodon.social later disabled the test account (see Known limitations) |
 | Dev.to | Failed (HTTP 401) | Worked in earlier runs; the test account was later flagged (see Known limitations) |
 
@@ -115,12 +115,38 @@ pytest -q
 Covers input validation, failure isolation, connection retry, per-platform request building (mocked HTTP), and public-access verification. No network access needed.
 
 ## Screenshots
-Located in `screenshots/`:
-- `01*-swagger-response*.png` and `sample-response.json`: full 7-platform response
-- ![Validation error](screenshots/02-validation-error.png)
-- ![Tests](screenshots/03-tests-passing.png)
-- ![Bluesky](screenshots/04-bluesky-post.png)
-- ![Telegram](screenshots/05-telegram-post.png)
-- ![Telegraph](screenshots/06-telegraph-post.png)
-- ![GitHub Gist](screenshots/07-github-gist.png)
-- ![GitLab snippet](screenshots/08-gitlab-snippet.png)
+All files are in the [`screenshots/`](screenshots/) folder. The full 7-platform JSON is in [`screenshots/sample-response.json`](screenshots/sample-response.json).
+
+**1. Full API response (all 7 platforms), parts 1 to 3**
+
+![Swagger response part 1](screenshots/01a-swagger-response.png)
+![Swagger response part 2](screenshots/01b-swagger-response.png)
+![Swagger response part 3](screenshots/01c-swagger-response.png)
+
+**2. Validation error (HTTP 422): message without a link**
+
+![Validation error](screenshots/02-validation-error.png)
+
+**3. Tests passing (18 passed)**
+
+![Tests passing](screenshots/03-tests-passing.png)
+
+**4. Live post on Bluesky**
+
+![Bluesky post](screenshots/04-bluesky-post.png)
+
+**5. Live post on Telegram (public channel)**
+
+![Telegram post](screenshots/05-telegram-post.png)
+
+**6. Live page on Telegraph**
+
+![Telegraph page](screenshots/06-telegraph-post.png)
+
+**7. Live public GitHub Gist**
+
+![GitHub Gist](screenshots/07-github-gist.png)
+
+**8. Live public GitLab snippet**
+
+![GitLab snippet](screenshots/08-gitlab-snippet.png)
